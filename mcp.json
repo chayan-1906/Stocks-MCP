@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "marketStack": {
+      "command": "/opt/homebrew/Cellar/node/23.11.0/bin/ts-node",
+      "args": [
+        "/Users/padmanabhadas/Chayan_Personal/Node Js/mcp-servers/stocks-mcp/src/server.ts"
+      ],
+      "env": {
+        "MARKETSTACK_API_KEY": "9944b49e65abff09f78ecee8b8964236"
+      }
+    }
+  }
+}
