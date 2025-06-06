@@ -1,9 +1,11 @@
 {
-  "name": "mcp-server-marketdata",
+  "name": "stocks-mcp",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/server.js",
   "scripts": {
     "build": "tsc",
+    "bundle": "ncc build dist/server.js -o build",
+    "package": "npm run build && npm run bundle && pkg build/index.js --targets node16-win-x64 --output dist/stocks-mcp",
     "start": "node dist/server.js",
     "dev": "ts-node --esm src/server.ts"
   },
@@ -13,7 +15,7 @@
     "marketdata",
     "claude"
   ],
-  "author": "Peyman",
+  "author": "Padmanabha",
   "license": "ISC",
   "description": "",
   "dependencies": {
@@ -23,8 +25,17 @@
     "zod": "^3.24.2"
   },
   "devDependencies": {
+    "@vercel/ncc": "^0.38.3",
     "@types/node": "^22.14.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.3"
+  },
+  "pkg": {
+    "assets": [
+      "node_modules/@modelcontextprotocol/sdk/**/*"
+    ],
+    "scripts": [
+      "node_modules/@modelcontextprotocol/sdk/**/*"
+    ]
   }
 }
