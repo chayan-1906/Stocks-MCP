@@ -32,7 +32,8 @@
   },
   "pkg": {
     "assets": [
-      "node_modules/@modelcontextprotocol/sdk/**/*"
+      "node_modules/@modelcontextprotocol/sdk/**/*",
+      ".env"
     ],
     "scripts": [
       "node_modules/@modelcontextprotocol/sdk/**/*"
